@@ -33,7 +33,7 @@ public class ContactsController {
         entity.setFirstName(contactCreateDTO.getFirstName());
         entity.setLastName(contactCreateDTO.getLastName());
         entity.setPhone(contactCreateDTO.getPhone());
-        return contactRepository.save(entity);
+        return entity;
     }
 
     private ContactDTO toDTO(Contact contact) {
