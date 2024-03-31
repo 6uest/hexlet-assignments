@@ -37,14 +37,14 @@ public class ContactsController {
     }
 
     private ContactDTO toDTO(Contact contact) {
-        var dto = new ContactDTO();
-        dto.setId(contact.getId());
-        dto.setFirstName(contact.getFirstName());
-        dto.setLastName(contact.getLastName());
-        dto.setPhone(contact.getPhone());
-        dto.setCreatedAt(contact.getCreatedAt());
-        dto.setUpdatedAt(contact.getUpdatedAt());
-        return dto;
+        return ContactDTO.builder()
+                .id(contact.getId())
+                .firstName(contact.getFirstName())
+                .lastName(contact.getLastName())
+                .phone(contact.getPhone())
+                .createdAt(contact.getCreatedAt())
+                .updatedAt(contact.getUpdatedAt())
+                .build();
     }
     // END
 }
